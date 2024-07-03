@@ -1,5 +1,5 @@
 import styles from './ColumnForm.module.scss'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 
