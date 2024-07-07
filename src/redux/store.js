@@ -1,10 +1,17 @@
 import { legacy_createStore as createStore } from 'redux';
 import initialState from './initialState';
+import shortid from 'shortid';
 
 const reducer = (state, action) => {
-    console.log('Current State:', state);
-    console.log('initialState:', initialState);
-    return state;
+    switch (action.type) {
+        case 'ADD_COLUMN':
+            //console.log('test', { ...state, columns: [...state.columns, { ...action.payload , id: shortid()}]});
+            return { ...state, columns: [...state.columns, { ...action.payload , id: shortid()}]};
+        case 'ADD_CARD':
+            return {...state, cards: [...state.cards, {...action.payload , id: shortid()}]}
+        default:
+            return state;
+    }
 };
 
 const store = createStore(
