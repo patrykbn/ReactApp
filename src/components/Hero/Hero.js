@@ -1,11 +1,12 @@
-import styles from './Hero.module.scss';
+//import styles from './Hero.module.scss';
+import PageTitle from '../PageTitle/Pagetitle';
 
 const Hero = () => {
+  const page = 'hero';
+  const title = 'My first React App';
+  const subtitle = 'A simple to-do app, with lists, columns and card'
     return (
-      <div className={styles.hero}>
-        <h1 className={styles.title}>My first React App</h1>
-        <p className={styles.subtitle}>A simple to-do app, with lists, columns and card</p>
-      </div>
+      <PageTitle page={page} title={title} subtitle={subtitle} />
     );
   };
 
