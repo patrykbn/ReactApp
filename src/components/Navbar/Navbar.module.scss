@@ -6,6 +6,9 @@
     background-color: $color-darker;
     width: 100%;
     justify-content: space-between;
+    .linkActive {
+        color: $color-warning;
+    }
 }
 
 .navtaskcontainer{
@@ -34,8 +37,13 @@
     margin: 0.3em 0 0.3em 0;
 }
 
+.navlinks li{
+    list-style-type: none;
+    padding: 0 1.2em 0 1.2em;
+}
+
 .navlinks a{
     text-decoration: none;
-    padding: 0 1.2em 0 1.2em;
-    color: $color-light
+    color: $color-light;
+    transition: color 1s;
 }

@@ -1,4 +1,5 @@
 import styles from './Navbar.module.scss';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -8,9 +9,9 @@ const Navbar = () => {
             </div>
             <div className={styles.navbuttoncontainer}>
                 <ul className={styles.navlinks}>
-                    <a href='/' className={styles.linkhome}><span className={styles.linktext}>Home</span></a>
-                    <a href='/favorite' className={styles.linkfavorite}><span className={styles.linktext}>Favorite</span></a>
-                    <a href='/about' className={styles.linkabout}><span className={styles.linktext}>About</span></a>
+                    <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} to="/">Home</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} to="/favorite">Favorite</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} to="/about">About</NavLink></li>
                 </ul>
             </div>
         </nav>

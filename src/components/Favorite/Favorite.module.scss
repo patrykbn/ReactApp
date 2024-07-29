@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '../../styles/settings.scss';
 
 .favorite {
@@ -21,4 +22,19 @@
 
 .title + .subtitle {
   margin-top: (- $base-size * 3);
+}
+
+.favoriteCards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  width: 40%;
+  padding: math.div($base-size, 2) 0;
+  li{
+    color: black;
+    font-size: ($base-size * 1.6);
+  }
 }

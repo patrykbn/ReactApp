@@ -10,4 +10,13 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    a{
+    span{
+        color: $color-dark;
+        padding-left: 0.5em;
+    }
+    }
+}
+.icons {
+    display: flex;
 }
